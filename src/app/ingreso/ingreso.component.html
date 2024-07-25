@@ -1,0 +1,21 @@
+<div class="col-md-12 offset-md-12">
+    <form [formGroup]="ingreso" (ngSubmit)="save()">
+      <fieldset>
+        <div  class="row ">
+          <div class="col-sm-8 col-md-6 col-lg-4 col-xl-4  mx-1 my-3 border border-dark">
+            <div class="row my-3 mx-1">
+                <label for="X" class="form-label">User</label>
+                <input type="text" class="form-control" id="id" formControlName="user" >
+            </div>
+            <div class="row my-3 mx-1">
+                <label for="X" class="form-label">Password</label>
+                <input type="password" class="form-control" id="codigo" formControlName="password">
+            </div>
+            <div class="row my-3 mx-1">
+                <button type="button"  class="btn btn-primary" (click)="save()">SAVE</button>
+            </div> 
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>

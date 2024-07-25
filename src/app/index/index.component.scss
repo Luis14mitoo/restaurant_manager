@@ -1,0 +1,23 @@
+
+
+
+
+ 
+ /* style.css */
+
+.contenedor {
+    display: flex; /* Activar el diseño flexbox */
+  }
+  
+  .columna-izquierda, .columna-derecha {
+    flex: 1; /* Distribuir el espacio equitativamente */
+  }
+  
+  .columna-izquierda {
+    display: flex; /* Activar flexbox para la columna izquierda */
+    flex-direction: column; /* Ordenar los elementos en columna */
+  }
+  
+  .fila-1, .fila-2 {
+    flex: 1; /* Distribuir el espacio equitativamente entre las filas */
+  }

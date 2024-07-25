@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* You can add global styles to this file, and also import other style files */
+
+
+/* Ruta de la imagen de fondo */
+$imagen-fondo: url("./assets/img/img_back.jpg");
+
+/* Tamaño de la imagen */
+$ancho-imagen: 1280px;
+$alto-imagen: 853px;
+
+$color-base: #5a5c5c; /* Color azul celeste */
+$color-g: #f1f8f6;
+$opacidad: 0.9; /* Valor de opacidad (50%) */
+
+$colorTextoP: #e8f804;
+/* Estilos para el div */
+.g-bg { 
+        background-image: $imagen-fondo;
+        background-size: cover; /* Ajusta la imagen al contenedor */ 
+    }
+
+.fondo { 
+    background-color: rgba($color-base, $opacidad);/* Color azul con opacidad 50% */
+    color: $color-g
+}
+
+.texto-minimo {
+    color: $colorTextoP;
+    font-size: 0.8rem;
+  }
+
+  .texto-pequeño {
+   
+    font-size: 0.1rem;
+  }
+
+  .container_p {
+
+    width: 50%;    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+
+    overflow: hidden;
+    margin: 10px 20px 30px 40px; /* 10px arriba, 20px derecha, 30px abajo, 40px izquierda */
+
+    background-color: rgba($color-base, $opacidad);/* Color azul con opacidad 50% */
+        color: $color-g;
+    
+    }
+
+    .container_b {
+
+        
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: rgba($color-base, $opacidad);/* Color azul con opacidad 50% */
+        color: $color-g;
+       
+        
+        }

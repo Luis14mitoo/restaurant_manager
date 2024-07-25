@@ -1,0 +1,93 @@
+<div class="container_p">
+    <form [formGroup]="form_client" >  
+        <fieldset>
+                <div class="row ">
+                    <div class="col ">
+                        <div class="form-group">
+                            <div class="col-6 ">
+                                <label for="id" class="col-form-label ">ID</label>
+                            </div>
+                            <div *ngIf="this.form_client.get('id')?.value" class="col- ">
+                                <label for="id" class="col-form-label ">ID</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="email" >CORREO</label>
+							 <input type="text" class="form-control" id="email" formControlName="email">
+							 <span *ngIf="this.form_client.get('email')?.value !='' && this.form_client.get('email')?.errors" id="email" class="texto-minimo">
+                                Email no valido
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="identity" >CEDULA</label>
+							<input type="text" id="identity" formControlName="identity" class="form-control">
+							<span *ngIf="this.form_client.get('identity')?.value !='' && this.form_client.get('identity')?.errors" id="identity" class="texto-minimo">
+                                Identificación no valida
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="names" class="col-form-label " >NOMBRES </label>
+                            <input type="text" class="form-control" id="names" formControlName="names">
+                           <span *ngIf="this.form_client.get('names')?.value !='' && this.form_client.get('names')?.errors" id="names" class="texto-minimo">
+                              Nombres no validos, los nombres solo deben contener letras
+                           </span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="surnames" class="col-form-label">APELLIDOS</label>
+                            <input type="text" id="surnames" formControlName="surnames" class="form-control"
+                               aria-describedby="passwordHelpInline">
+                                <span *ngIf="this.form_client.get('surnames')?.value !='' && this.form_client.get('surnames')?.errors" id="surnames" class="texto-minimo">
+                               Apellidos no válidos, los apellidos solo deben contener letras
+                           </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="phone" class="col-form-label ">TELEFONO</label>
+							<input type="text" class="form-control" id="phone" formControlName="phone">
+							<span *ngIf="this.form_client.get('phone')?.value !='' && this.form_client.get('phone')?.errors" id="phone" class="texto-minimo ">
+                               Numero de celular invalido
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="address" class="col-form-label">DIRECCIÓN</label>
+							<input type="text" id="address" formControlName="address" class="form-control"
+                                aria-describedby="passwordHelpInline">
+								<span *ngIf="this.form_client.get('address')?.value !='' && this.form_client.get('address')?.errors" id="address" class="texto-minimo">
+                               La direcion no es válida
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3 mb-2">
+                    <div class="col ">
+                        <button type="submit" class="btn btn-primary m-3 " (click)="save_client()" >Crear Usuario</button>
+                        <button type="submit" class="btn btn-primary m-3" (click)="cancelar()">Cancelar</button> 
+                    </div>
+                </div>
+        </fieldset>
+    </form>
+</div>
+
+
+
